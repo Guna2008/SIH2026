@@ -36,10 +36,6 @@ npm install
 npm run dev
 ```
 
-## Environment Variables
-
-Configure the required environment variables in `.env` files. Do not commit API keys or secrets to GitHub.
-
 ## Project Status
 
 Currently under development.
