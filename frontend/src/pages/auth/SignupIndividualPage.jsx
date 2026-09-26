@@ -1,0 +1,1 @@
+import OrganizationSignupForm from './OrganizationSignupForm'; export default function SignupIndividualPage(){return <OrganizationSignupForm role='INDIVIDUAL' />}

@@ -1,0 +1,1 @@
+import OrganizationSignupForm from './OrganizationSignupForm'; export default function SignupFoodBankPage(){return <OrganizationSignupForm role='FOOD_BANK' />}

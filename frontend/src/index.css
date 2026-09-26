@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5FAF6;
+  color: #17251D;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #16834A;
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid #16834A;
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #DCE8DF; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #B6DCC2; }
+
+@layer utilities {
+  .font-display { font-family: 'Fraunces', ui-serif, Georgia, serif; }
+  .text-balance { text-wrap: balance; }
+}
+
+/* Responsive foundations for phone, tablet and desktop layouts. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { min-height: 100%; width: 100%; }
+body { margin: 0; overflow-x: hidden; }
+img, video, canvas, svg { max-width: 100%; }
+input, select, textarea, button { font: inherit; }
+input, select, textarea { min-width: 0; max-width: 100%; }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+@media (max-width: 1023px) {
+  .dashboard-main { max-width: none; padding: 1.25rem 1rem calc(6.5rem + env(safe-area-inset-bottom, 0px)); }
+  .dashboard-topbar { height: auto; min-height: 4rem; padding: .75rem 1rem; gap: .75rem; }
+  .dashboard-topbar h1 { font-size: 1.125rem; line-height: 1.35; }
+  .dashboard-topbar > div { gap: .5rem; }
+}
+@media (max-width: 640px) {
+  .auth-card { padding: 1.25rem !important; }
+  .dashboard-main h1 { overflow-wrap: anywhere; }
+  .dashboard-main .grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .dashboard-main [class*="grid-cols-"] { grid-template-columns: minmax(0, 1fr) !important; }
+  .dashboard-main .flex-wrap-mobile { flex-wrap: wrap; }
+  .dashboard-main table { min-width: 620px; }
+  .dashboard-main .overflow-x-auto { max-width: calc(100vw - 2rem); }
+  .dashboard-main form { min-width: 0; }
+  .dashboard-main button, .dashboard-main a { touch-action: manipulation; }
+  .dashboard-topbar .text-xs { max-width: 8rem; }
+}
