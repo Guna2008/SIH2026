@@ -2,6 +2,11 @@
 __pycache__/
 *.py[cod]
 
+# Virtual environment
+venv/
+.venv/
+env/
+
 # Jupyter
 .ipynb_checkpoints/
 
@@ -15,3 +20,6 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# ZIP files
+*.zip
