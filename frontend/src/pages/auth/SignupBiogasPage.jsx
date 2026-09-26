@@ -1,0 +1,1 @@
+import OrganizationSignupForm from './OrganizationSignupForm'; export default function SignupBiogasPage(){return <OrganizationSignupForm role='BIOGAS_PLANT' />}
